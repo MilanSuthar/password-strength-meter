@@ -1,0 +1,160 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.password-meter {
+  margin-top: 8px;
+  font-family: sans-serif;
+}
+
+/* Meter bars */
+.meter-bar {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+.bar {
+  flex: 1;
+  height: 8px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+/* Circle meter */
+.meter-circle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 8px auto;
+}
+.meter-circle svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+.circle-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+/* Gradient */
+.meter-gradient {
+  height: 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  transition: background 0.3s;
+}
+
+/* Rules list */
+.rules-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.rules-list li {
+  margin-bottom: 2px;
+  color: red;
+  transition: all 0.3s;
+}
+.rules-list li.valid.strike {
+  color: green;
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+/* Password input wrapper */
+.password-input-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 8px;
+}
+.password-input-wrapper input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+.password-input-wrapper .eye-icon {
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 16px;
+  color: #666;
+  user-select: none;
+  transition: color 0.2s;
+}
+.password-input-wrapper .eye-icon:hover {
+  color: #333;
+}
